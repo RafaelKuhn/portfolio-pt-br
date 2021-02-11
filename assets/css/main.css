@@ -1690,10 +1690,28 @@ input, select, textarea {
 		color: inherit;
     
   }
+  
   ul.iconsnew {
     display: block;
     padding-left: 40px;
   }
+
+  ul.sublist {
+    list-style-type: none;
+    padding-left: 0px;
+  }
+  ul.sublist li span {
+    position: relative;
+    left: 10px;
+  }
+  ul.sublist li::before {
+    content: "\2ba1";
+  }
+
+  ul.mainlist {
+    list-style-type: none;
+  }
+
   
   #contact {
     position: absolute;
