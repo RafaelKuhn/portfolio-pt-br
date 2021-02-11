@@ -198,8 +198,15 @@ input, select, textarea {
 			width: -ms-max-content;
 			width: max-content;
 			padding-bottom: 0.5rem;
-			margin: 0 0 2rem 0;
+      margin: 0 0 2rem 0;
 		}
+
+    h1.major-centered, h2.major-centered {
+      text-align: center;
+      margin: 0 px auto;
+      display: block;
+    }
+    
 
 	h1 {
 		font-size: 2.25rem;
@@ -1702,22 +1709,28 @@ input, select, textarea {
   }
   ul.sublist li span {
     position: relative;
-    left: 10px;
+    left: 5px;
   }
-  ul.sublist li::before {
-    content: "\2ba1";
+  ul.sublist li i {
+    font-size: 0.5em;
+    vertical-align: middle;
   }
+  
 
   ul.mainlist {
     list-style-type: none;
   }
   
+  @media screen and (min-width: 600px) {
+    .mobile-break {
+      display: none;
+    }
+  }
+
   #contact {
     position: absolute;
     width: 50%;
     bottom: 10px;
-    /* text-align: center;
-    /* border: 3px solid #8AC007; */
   }
 
   #contact-centered {
@@ -1742,7 +1755,6 @@ input, select, textarea {
     background-color: grey;
   }
 
-
   .dropdown-button {
     font-family: 'Courier New', Courier, monospace;
     font-size: 16px;
@@ -1754,7 +1766,6 @@ input, select, textarea {
     vertical-align: middle;
   }
 
-  
   .dropdown-content {
     display: none;
     position: absolute;
@@ -1782,5 +1793,8 @@ input, select, textarea {
     margin-right: 5px;
     vertical-align: middle;
   }
+
+
+ 
   
   
