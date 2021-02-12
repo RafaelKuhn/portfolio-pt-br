@@ -200,12 +200,6 @@ input, select, textarea {
 			padding-bottom: 0.5rem;
       margin: 0 0 2rem 0;
 		}
-
-    h1.major-centered, h2.major-centered {
-      text-align: center;
-      margin: 0 px auto;
-      display: block;
-    }
     
 
 	h1 {
@@ -1721,23 +1715,26 @@ input, select, textarea {
     list-style-type: none;
   }
   
-  @media screen and (min-width: 600px) {
+
+
+  @media screen and (min-width: 600px) { /* when more than 600px, dont show line break */
     .mobile-break {
       display: none;
     }
   }
-
-  #contact {
-    position: absolute;
-    width: 50%;
-    bottom: 10px;
+  @media screen and (max-width: 600px) {
+    h1.center-on-mobile, h2.center-on-mobile, h3.center-on-mobile, h4.center-on-mobile, h5.center-on-mobile, h6.center-on-mobile {
+      text-align: center;
+      margin: auto;
+    }
   }
+
+  
 
   #contact-centered {
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
   }
-
 
 
 
@@ -1796,5 +1793,4 @@ input, select, textarea {
 
 
  
-  
-  
+ 
