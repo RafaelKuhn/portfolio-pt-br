@@ -1711,6 +1711,11 @@ input, select, textarea {
   }
   
 
+  ul.sublist-small, ul.sublist-small li {
+    font-size: 0.9em;
+  }
+
+
   ul.mainlist {
     list-style-type: none;
   }
@@ -1793,4 +1798,6 @@ input, select, textarea {
 
 
  
- 
+  div.bordered {
+    border: double;
+  }
