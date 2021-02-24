@@ -1797,11 +1797,7 @@ input, select, textarea {
 
 
   div.work-content {
-    margin-bottom: 50px;
-
-    /* border: double; */
   }
-
   img.work-content {
     border-radius: 8px;
     max-width: 100%;
@@ -1813,7 +1809,6 @@ input, select, textarea {
     margin-top: 0px;
     margin-bottom: 0px;
   }
-  
   p.content-description + p {
     font-size: 0.9em;
     font-style: normal;
@@ -1824,7 +1819,38 @@ input, select, textarea {
     margin-bottom: 0.5em;
     margin-left: 0.5em;
   }
-
   p.content-description + p span:after {
     content: "\00a0\00a0\00a0•\00a0\00a0\00a0";
+  }
+
+
+
+  button.collapsible {
+    border-radius: 0px;
+    background-color: #555;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    margin-bottom: 0em;
+    margin-top: 0em;
+    width: 50%;
+  }
+  button.active, .collapsible:hover {
+    background-color: #777;
+  }
+  
+  div.collapsible-content {
+    /* border: double; /* debug */
+    margin-bottom: 20px;
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+
+  div.collapsible-content p:first-of-type {
+    margin-top: 20px;
   }
