@@ -1796,12 +1796,11 @@ input, select, textarea {
 
 
 
-  div.work-content {
-  }
   img.work-content {
-    border-radius: 8px;
-    max-width: 100%;
-    height: auto;
+    text-align: center;
+    width: 80%;
+    border-radius: 0px;
+    /**/
   }
 
   p.content-description {
@@ -1826,31 +1825,44 @@ input, select, textarea {
 
 
   button.collapsible {
+    display: flex;
+    align-items: center;
     border-radius: 0px;
     background-color: #555;
     color: white;
     cursor: pointer;
-    padding: 18px;
     text-align: left;
     outline: none;
-    font-size: 15px;
     margin-bottom: 0em;
     margin-top: 0em;
-    width: 50%;
+    width: 80%;
+  }
+  button.collapsible h3 {
+    margin-top: 1.2em;
   }
   button.active, .collapsible:hover {
     background-color: #777;
   }
   
   div.collapsible-content {
-    /* border: double; /* debug */
+    /*border: double; /* debug */
     margin-bottom: 20px;
     padding: 0 18px;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
   }
-
   div.collapsible-content p:first-of-type {
     margin-top: 20px;
+  }
+
+
+  
+  img.button-icon {
+    vertical-align: middle;
+    float: left;
+    height: 70%;
+    margin-right: 12px;
+    margin-left:0em;
+    margin-top: 0em;
   }

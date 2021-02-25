@@ -70,9 +70,9 @@
 
 		<!-- Wrapper -->
 			<div id="wrapper">
+
 				<!-- Header -->
 					<header id="header">
-
 						<div class="logo">
 							<img src="images/icon.png" class="logo">
               <!-- this is the css with fancy diamond and such -->
@@ -100,7 +100,7 @@
 							<ul>
 								<li><a href="#about" onclick="articleClicked('About')">Sobre</a></li>
 								<li><a href="#stack" onclick="articleClicked('Stack')">Competências</a></li>
-								<li><a href="#projects" onclick="articleClicked('Projects')">Projetos</a></li>
+								<li><a href="#studies" onclick="articleClicked('Projects')">Estudos</a></li>
 								<li><a href="#work" onclick="articleClicked('Work')">Trabalho</a></li>
 								<li><a href="#contact" onclick="articleClicked('Contact')">Contato</a></li>
 							</ul>
@@ -164,68 +164,87 @@
               </p>
             </article>
 
-            <!-- Projects -->
-            <article id="projects">
-              <h2 class="major">Projetos próprios</h2>
-              <h3 class="major">Projeto1</h3>
+            <!-- Studies -->
+            <article id="studies">
+              <h2 class="major center-on-mobile">Estudos<br class="mobile-break" /> • <br class="mobile-break" />Projetos Pessoais</h2><br class="mobile-break" />
               
-              <p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.</p>
-              <p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
+              <!-- Sorting algorithms -->
+              <div class="work-content">
+                <button type="button" class="collapsible"><img src="images/apps-icons/sort.jpg" class="button-icon" /><h3>Ordenação (algoritmos)</h3></button>
+                <div class="collapsible-content">
+                  <p class="content-description"></p>
+                  <p>
+                    Este projeto contém uma representação gráfica simples da implementação de alguns dos mais famosos algoritmos de ordenação.<br/>
+                    Feito em Unity C# utilizando coroutines e sliders.
+                  </p>
+                  <p class="content-description">Tecnologias</p>
+                  <p>Unity<span></span>C# (.NET)
+                  <p class="content-description">Anexos</p>
+                  <img src="./images/gifs/Sorting/1.gif" class="work-content" />
+                  <img src="./images/gifs/Sorting/2.gif" class="work-content" />
+                </div>
+              </div>
+              
+              
             </article>
 
             <!-- Work -->
             <article id="work">
               <h2 class="major center-on-mobile">Experiência<br class="mobile-break" /> • <br class="mobile-break" />Trabalho</h2><br class="mobile-break" />
               
-              <div class="work-content"> <!-- ciências -->
-                <button type="button" class="collapsible"><h3>Ciências RA</h3></button>
+              <!-- ciências -->
+              <div class="work-content"> 
+                <button type="button" class="collapsible"><img src="images/apps-icons/cie.webp" class="button-icon" /><h3>Ciências RA</h3></button>
                 <div class="collapsible-content">
                   <p class="content-description"></p>
                   <p>
-                    Ciências RA é um aplicativo
-                    Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre SobreSobre
-                    Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre
-                    Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre
-                    átomo - estados água - camadas atmosfera
+                    Ciências RA é um aplicativo de realidade aumentada para visualização de "cenas 3d" que ensinam 
+                    o conteúdo de ciências do ensino fundamental e médio quando o usuário aponta a câmera para um "código AR" 
+                    em formato de imagem.
                   </p>
                   <p class="content-description">Tecnologias</p>
                   <p>Unity 2019<span></span>C# (.NET)<span></span>EasyAR SDK</p>
                   <p class="content-description">Responsabilidades</p>
                   <p>
-                    Liderança de um time pequeno (programador e artista).<br />
-                    Responsabilidade pela pipeline gráfica<br/>
+                    Responsabilidade pela pipeline gráfica e repositório GIT.<br/> 
                     Desenvolvimento de novas cenas<br/>
                     Integração com sistema de login.<br/>
                     Publicação para android.<br/>
-                    GIT.<br />
                   </p>
                   <p class="content-description">Anexos</p>
-                  <img src="./images/math-angles.gif" class="work-content" />
+                  <!-- <img src="./images/gifs/math-angles.gif" class="work-content" />algo -->
                 </div>
               </div>
               
-              <div class="work-content"> <!-- matemática -->
-                <button type="button" class="collapsible"><h3>Matemática RA</h3></button>
+              <!-- matemática -->
+              <div class="work-content">
+                <button type="button" class="collapsible"><img src="images/apps-icons/math.webp" class="button-icon" /><h3>Matemática RA</h3></button>
                 <div class="collapsible-content">
                   <p class="content-description"></p>
                   <p>
-                    Matemática RA é um aplicativo
-                    Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre SobreSobre
-                    Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre
-                    Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre sobre
+                    Matemática RA é um aplicativo de realidade aumentada para visualização de "cenas 3d" que ensinam 
+                    o conteúdo de matemática geral quando o usuário aponta a câmera para um "código AR" 
+                    em formato de imagem.
                   </p>
                   <p class="content-description">Tecnologias</p>
                   <p>Unity 2019<span></span>C# (.NET)<span></span>EasyAR SDK</p>
                   <p class="content-description">Responsabilidades</p>
                   <p>
+                    Sincronização dos conceitos matemáticos das cenas com a lógica do aplicativo<br />
+                    Otimizações de scripts, texturas, meshes, redução do peso do aplicativo em ≈40%<br />
                     Liderança de um pequeno time (programador e artista).<br />
-                    Responsabilidade pela pipeline gráfica e repositório GIT.<br/>
+                    Responsabilidade pela pipeline gráfica e repositório GIT.<br/> 
                     Desenvolvimento de novas cenas<br/>
                     Integração com sistema de login.<br/>
                     Publicação para android.<br/>
                   </p>
                   <p class="content-description">Anexos</p>
-                  <img src="./images/math-angles.gif" class="work-content" />
+                  <img src="./images/gifs/Math/math-angles.gif" class="work-content"></img>
+                  <img src="./images/gifs/Math/math-measure1.gif" class="work-content" />
+                  <img src="./images/gifs/Math/math-measure2.gif" class="work-content" />
+                  <img src="./images/gifs/Math/math-runners.gif" class="work-content" />
+                  <img src="./images/gifs/Math/math-volume1.gif" class="work-content" />
+                  
                 </div>
               </div>
               
