@@ -100,7 +100,7 @@
 							<ul>
 								<li><a href="#about" onclick="articleClicked('About')">Sobre</a></li>
 								<li><a href="#stack" onclick="articleClicked('Stack')">Competências</a></li>
-								<li><a href="#studies" onclick="articleClicked('Projects')">Estudos</a></li>
+								<li><a href="#studies" onclick="articleClicked('Studies')">Estudo</a></li>
 								<li><a href="#work" onclick="articleClicked('Work')">Trabalho</a></li>
 								<li><a href="#contact" onclick="articleClicked('Contact')">Contato</a></li>
 							</ul>
@@ -135,8 +135,8 @@
                   <li><i class="fas fa-chevron-right"></i><span>Testes automatizados</span></li>
                   <li><i class="fas fa-chevron-right"></i><span>Publicação Android / Windows / WebGL</span></li>
                   <li><i class="fas fa-chevron-right"></i><span>Profiling</span></li>
-                  <li><i class="fas fa-chevron-right"></i><span>Mesh procedural</span></li>
                   <li><i class="fas fa-chevron-right"></i><span>Shaders</span></li>
+                  <li><i class="fas fa-chevron-right"></i><span>Mesh procedural</span></li>
                   </ul></li>
 
                   <li>Complementar<ul class="sublist">
@@ -170,7 +170,7 @@
               
               <!-- Sorting algorithms -->
               <div class="work-content">
-                <button type="button" class="collapsible"><img src="images/apps-icons/sort.jpg" class="button-icon" /><h3>Ordenação (algoritmos)</h3></button>
+                <button type="button" class="collapsible"><img src="images/apps-icons/sort.jpg" class="button-icon" /><h3>Algoritmos de Ordenação</h3></button>
                 <div class="collapsible-content">
                   <p class="content-description"></p>
                   <p>
@@ -182,9 +182,9 @@
                   <p class="content-description">Anexos</p>
                   <img src="./images/gifs/Sorting/1.gif" class="work-content" />
                   <img src="./images/gifs/Sorting/2.gif" class="work-content" />
+                  <button type="button" class="close-collapsible"><img src="images/apps-icons/sort.jpg" class="button-icon" /><h3>Fechar</h3></button>
                 </div>
               </div>
-              
               
             </article>
 
@@ -213,6 +213,7 @@
                   </p>
                   <p class="content-description">Anexos</p>
                   <!-- <img src="./images/gifs/math-angles.gif" class="work-content" />algo -->
+                  <button type="button" class="close-collapsible"><img src="images/apps-icons/cie.webp" class="button-icon" /><h3>Fechar</h3></button>
                 </div>
               </div>
               
@@ -220,15 +221,15 @@
               <div class="work-content">
                 <button type="button" class="collapsible"><img src="images/apps-icons/math.webp" class="button-icon" /><h3>Matemática RA</h3></button>
                 <div class="collapsible-content">
-                  <p class="content-description"></p>
+                  <h3 class="content-description"></h3>
                   <p>
-                    Matemática RA é um aplicativo de realidade aumentada para visualização de "cenas 3d" que ensinam 
-                    o conteúdo de matemática geral quando o usuário aponta a câmera para um "código AR" 
+                    Matemática RA é um aplicativo de realidade aumentada para visualização de "cenas 3d" que auxiliam no
+                    ensino de conteúdos de matemática quando o usuário aponta a câmera para o respectivo "código AR" 
                     em formato de imagem.
                   </p>
-                  <p class="content-description">Tecnologias</p>
+                  <h3 class="content-description">Tecnologias</h3>
                   <p>Unity 2019<span></span>C# (.NET)<span></span>EasyAR SDK</p>
-                  <p class="content-description">Responsabilidades</p>
+                  <h3 class="content-description">Responsabilidades</h3>
                   <p>
                     Sincronização dos conceitos matemáticos das cenas com a lógica do aplicativo<br />
                     Otimizações de scripts, texturas, meshes, redução do peso do aplicativo em ≈40%<br />
@@ -238,13 +239,17 @@
                     Integração com sistema de login.<br/>
                     Publicação para android.<br/>
                   </p>
-                  <p class="content-description">Anexos</p>
-                  <img src="./images/gifs/Math/math-angles.gif" class="work-content"></img>
+                  <h3 class="content-description">Anexos</h3>
+                  <p class="image-description">Ângulos</p>
+                  <img src="./images/gifs/Math/math-angles.gif" class="work-content" />
+                  <p class="image-description">Medida de comprimento</p>
                   <img src="./images/gifs/Math/math-measure1.gif" class="work-content" />
                   <img src="./images/gifs/Math/math-measure2.gif" class="work-content" />
+                  <p class="image-description">Velocidade</p>
                   <img src="./images/gifs/Math/math-runners.gif" class="work-content" />
                   <img src="./images/gifs/Math/math-volume1.gif" class="work-content" />
-                  
+
+                  <button type="button" class="close-collapsible"><img src="images/apps-icons/math.webp" class="button-icon" /><h3>Fechar</h3></button>
                 </div>
               </div>
               
@@ -294,6 +299,6 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
     <!-- Added Scripts -->
-			<script src="assets/js/collapsible.js"></script>
+			<script src="js/collapsible.js"></script>
 	</body>
 </html>

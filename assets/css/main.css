@@ -1803,12 +1803,12 @@ input, select, textarea {
     /**/
   }
 
-  p.content-description {
+  h3.content-description {
     font-weight: bold;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: 1em;
+    margin-bottom: 0em;
   }
-  p.content-description + p {
+  h3.content-description + p {
     font-size: 0.9em;
     font-style: normal;
     text-align: justify;
@@ -1818,13 +1818,23 @@ input, select, textarea {
     margin-bottom: 0.5em;
     margin-left: 0.5em;
   }
-  p.content-description + p span:after {
+  h3.content-description + p span:after {
     content: "\00a0\00a0\00a0•\00a0\00a0\00a0";
   }
 
 
 
-  button.collapsible {
+  p.image-description {
+    padding-left: 10px;
+    margin-top: 0em;
+    margin-right: 0em;
+    margin-bottom: 0.2em;
+    margin-left: 0em;
+  }
+
+
+
+  button.collapsible, button.close-collapsible {
     display: flex;
     align-items: center;
     border-radius: 0px;
@@ -1837,13 +1847,13 @@ input, select, textarea {
     margin-top: 0em;
     width: 80%;
   }
-  button.collapsible h3 {
-    margin-top: 1.2em;
-  }
-  button.active, .collapsible:hover {
+  button.active, button.collapsible:hover, button.close-collapsible:hover {
     background-color: #777;
   }
-  
+  button.collapsible h3, button.close-collapsible h3 {
+    margin-top: 1.2em;
+  }
+
   div.collapsible-content {
     /*border: double; /* debug */
     margin-bottom: 20px;
