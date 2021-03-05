@@ -20,7 +20,7 @@ form, label, legend, table, caption, tbody,
 tfoot, thead, tr, th, td, article, aside,
 canvas, details, embed, figure, figcaption,
 footer, header, hgroup, menu, nav, output, ruby,
-section, summary, time, mark, audio, video {
+section, summary, time, mark, audio {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -1796,13 +1796,6 @@ input, select, textarea {
 
 
 
-  img.work-content {
-    text-align: center;
-    width: 80%;
-    border-radius: 0px;
-    /**/
-  }
-
   h3.content-description {
     font-weight: bold;
     margin-top: 0em;
@@ -1885,4 +1878,10 @@ input, select, textarea {
   }
   img.published:hover {
     opacity: 0.5;
+  }
+  
+  
+  
+  video {
+    max-width: 100%;
   }
