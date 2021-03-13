@@ -1134,14 +1134,14 @@ input, select, textarea {
 		}
 
 		#bg:before {
-			-moz-transition: background-color 2.5s ease-in-out;
-			-webkit-transition: background-color 2.5s ease-in-out;
-			-ms-transition: background-color 2.5s ease-in-out;
-			transition: background-color 2.5s ease-in-out;
-			-moz-transition-delay: 0.75s;
-			-webkit-transition-delay: 0.75s;
-			-ms-transition-delay: 0.75s;
-			transition-delay: 0.75s;
+			-moz-transition: background-color 0.5s ease-in-out;
+			-webkit-transition: background-color 0.5s ease-in-out;
+			-ms-transition: background-color 0.5s ease-in-out;
+			transition: background-color 0.5s ease-in-out;
+			-moz-transition-delay: 0s;
+			-webkit-transition-delay: 0s;
+			-ms-transition-delay: 0s;
+			transition-delay: 0s;
 			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
 			background-size: auto,
  256px 256px;
@@ -1241,6 +1241,7 @@ input, select, textarea {
 /* Header */
 
 	#header {
+
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
@@ -1269,6 +1270,7 @@ input, select, textarea {
 			-moz-transition: opacity 0.325s ease-in-out;
 			-webkit-transition: opacity 0.325s ease-in-out;
 			-ms-transition: opacity 0.325s ease-in-out;
+			transition: opacity 0.325s ease-in-out;
 			transition: opacity 0.325s ease-in-out;
 			position: relative;
 			margin-top: 3.5rem;
@@ -1406,23 +1408,7 @@ input, select, textarea {
 			opacity: 0;
 		}
 
-		body.is-preload #header {
-			-moz-filter: blur(0.125rem);
-			-webkit-filter: blur(0.125rem);
-			-ms-filter: blur(0.125rem);
-			filter: blur(0.125rem);
-		}
-
-			body.is-preload #header > * {
-				opacity: 0;
-			}
-
-			body.is-preload #header .content .inner {
-				max-height: 0;
-				padding-top: 0;
-				padding-bottom: 0;
-				opacity: 0;
-			}
+		
 
 		@media screen and (max-width: 980px) {
 
@@ -1881,7 +1867,12 @@ input, select, textarea {
   }
   
   
-  
   video {
     max-width: 100%;
+  }
+
+
+  h4.subtitle {
+    margin: 0;
+    margin-bottom: 0.3em;
   }
