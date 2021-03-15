@@ -4,6 +4,8 @@
   Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+import { pauseAllVideos } from '../../js/utils.js';
+
 (function ($) {
 
   var $window = $(window),
@@ -217,6 +219,7 @@
 
     pauseAllVideos();
 
+
     // Handle lock.
     // Already locked? Speed through "hide" steps w/o delays.
     if (locked) {
@@ -402,11 +405,6 @@
     $window.on('load', function () {
       $main._show(location.hash.substr(1), true);
     });
-
-  // my functions
-  function pauseAllVideos() {
-    document.querySelectorAll('video').forEach(video => video.pause());
-  }
   
 
 })(jQuery);

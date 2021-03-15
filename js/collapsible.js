@@ -1,4 +1,7 @@
+import { pauseAllVideos } from '../../js/utils.js';
+
 (function() {
+
   var collapsibles = document.getElementsByClassName("collapsible");
   for (var i = 0; i < collapsibles.length; i++) {
 
@@ -7,7 +10,7 @@
     
     var button;
     collapsible.addEventListener("click", function() {
-      document.querySelectorAll('video').forEach(video => video.pause());
+      pauseAllVideos();
       button = this;
       button.classList.toggle("active");
       collapsibleCloser.classList.toggle("active");
@@ -20,7 +23,7 @@
     });
 
     collapsibleCloser.addEventListener("click", function() {
-      document.querySelectorAll('video').forEach(video => video.pause());
+      pauseAllVideos();
       button.classList.toggle("active");
       var content = this.parentElement;
       if (content.style.maxHeight){
