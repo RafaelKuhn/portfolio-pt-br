@@ -1,4 +1,4 @@
-import { pauseAllVideos as pauseAllVideos } from './utils';
+import { pauseAllVideos } from './utils.js';
 
 (function() {
 
