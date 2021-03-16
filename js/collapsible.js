@@ -1,5 +1,3 @@
-import { pauseAllVideos } from '../../js/utils.js';
-
 (function() {
 
   var collapsibles = document.getElementsByClassName("collapsible");
@@ -10,7 +8,7 @@ import { pauseAllVideos } from '../../js/utils.js';
     
     var button;
     collapsible.addEventListener("click", function() {
-      pauseAllVideos();
+      pauseVideosWithoutAutoplay();
       button = this;
       button.classList.toggle("active");
       collapsibleCloser.classList.toggle("active");
@@ -23,7 +21,7 @@ import { pauseAllVideos } from '../../js/utils.js';
     });
 
     collapsibleCloser.addEventListener("click", function() {
-      pauseAllVideos();
+      pauseVideosWithoutAutoplay();
       button.classList.toggle("active");
       var content = this.parentElement;
       if (content.style.maxHeight){
@@ -33,7 +31,20 @@ import { pauseAllVideos } from '../../js/utils.js';
       }
     });
     
-    
   }
+
+  function pauseVideosWithoutAutoplay() {
+  
+    document.querySelectorAll('video').forEach(video =>  {
+      const isVideoAutoplaying = video.autoplay;
+      if (isVideoAutoplaying) {
+        return;
+      }
+      
+      video.pause();
+    });
+  
+  };
+
 })();
 

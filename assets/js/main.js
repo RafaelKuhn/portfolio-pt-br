@@ -3,9 +3,6 @@
   html5up.net | @ajlkn
   Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
-
-import { pauseAllVideos } from '../../js/utils.js';
-
 (function ($) {
 
   var $window = $(window),
@@ -217,7 +214,7 @@ import { pauseAllVideos } from '../../js/utils.js';
       && addState === true)
       history.pushState(null, null, '#');
 
-    pauseAllVideos();
+      pauseVideosWithoutAutoplay();
 
 
     // Handle lock.
@@ -406,5 +403,18 @@ import { pauseAllVideos } from '../../js/utils.js';
       $main._show(location.hash.substr(1), true);
     });
   
+  // my functions
+  function pauseVideosWithoutAutoplay() {
+  
+    document.querySelectorAll('video').forEach(video =>  {
+      const isVideoAutoplaying = video.autoplay;
+      if (isVideoAutoplaying) {
+        return;
+      }
+      
+      video.pause();
+    });
+  
+  };
 
 })(jQuery);
