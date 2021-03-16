@@ -1826,7 +1826,7 @@ input, select, textarea {
     margin-top: 0em;
     width: 80%;
   }
-  button.active, button.collapsible:hover, button.close-collapsible:hover {
+  button.collapsible:hover, button.close-collapsible:hover {
     background-color: #777;
   }
   button.collapsible h3, button.close-collapsible h3 {
