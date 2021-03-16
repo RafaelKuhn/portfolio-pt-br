@@ -4,7 +4,7 @@
   Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-import { pauseVideosWithoutAutoplay } from '../../js/utils.js';
+import { pauseAllVideos as pauseAllVideos } from './utils';
 
 (function ($) {
 
@@ -217,7 +217,7 @@ import { pauseVideosWithoutAutoplay } from '../../js/utils.js';
       && addState === true)
       history.pushState(null, null, '#');
 
-    pauseVideosWithoutAutoplay();
+    pauseAllVideos();
 
     // Handle lock.
     // Already locked? Speed through "hide" steps w/o delays.
