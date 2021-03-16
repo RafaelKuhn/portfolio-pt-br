@@ -1,5 +1,5 @@
 // my functions
-export function pauseVideosWithoutAutoplay() {
+export function pauseAllVideos() {
   
   document.querySelectorAll('video').forEach(video =>  {
     const isVideoAutoplaying = video.autoplay;
