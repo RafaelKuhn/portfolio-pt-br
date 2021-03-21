@@ -1,8 +1,3 @@
-/*
-  Dimension by HTML5 UP
-  html5up.net | @ajlkn
-  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
 (function ($) {
 
   var $window = $(window),
@@ -26,7 +21,7 @@
   $window.on('load', function () {
     $body.removeClass('is-preload');
   });
-  /*
+  
     // Play initial animations on page load.
     $window.on('load', function() {
       window.setTimeout(function() {
@@ -34,7 +29,6 @@
       }, 100);
     });
 
-    /* */
   // Fix: Flexbox min-height bug on IE.
   if (browser.name == 'ie') {
 
@@ -203,6 +197,8 @@
 
   $main._hide = function (addState) {
 
+    pauseVideosWithoutAutoplay();
+
     var $article = $main_articles.filter('.active');
 
     // Article not visible? Bail.
@@ -213,9 +209,6 @@
     if (typeof addState != 'undefined'
       && addState === true)
       history.pushState(null, null, '#');
-
-      pauseVideosWithoutAutoplay();
-
 
     // Handle lock.
     // Already locked? Speed through "hide" steps w/o delays.
@@ -323,8 +316,8 @@
   $window.on('keyup', function (event) {
 
     switch (event.keyCode) {
-
-      case 27:
+      // 27 means ESC
+      case 27: 
 
         // Article visible? Hide.
         if ($body.hasClass('is-article-visible'))
@@ -403,18 +396,4 @@
       $main._show(location.hash.substr(1), true);
     });
   
-  // my functions
-  function pauseVideosWithoutAutoplay() {
-  
-    document.querySelectorAll('video').forEach(video =>  {
-      const isVideoAutoplaying = video.autoplay;
-      if (isVideoAutoplaying) {
-        return;
-      }
-      
-      video.pause();
-    });
-  
-  };
-
 })(jQuery);

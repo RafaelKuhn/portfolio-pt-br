@@ -30,21 +30,7 @@
         content.style.maxHeight = content.scrollHeight + "px";
       }
     });
-    
   }
-
-  function pauseVideosWithoutAutoplay() {
-  
-    document.querySelectorAll('video').forEach(video =>  {
-      const isVideoAutoplaying = video.autoplay;
-      if (isVideoAutoplaying) {
-        return;
-      }
-      
-      video.pause();
-    });
-  
-  };
 
 })();
 
