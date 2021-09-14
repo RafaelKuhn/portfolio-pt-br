@@ -26,18 +26,14 @@
     $window.on('load', function() {
       window.setTimeout(function() {
         $body.removeClass('is-preload');
-      }, 15);
+      }, 100);
     });
 
   // Fix: Flexbox min-height bug on IE.
   if (browser.name == 'ie') {
-
     var flexboxFixTimeoutId;
-
     $window.on('resize.flexbox-fix', function () {
-
       clearTimeout(flexboxFixTimeoutId);
-
       flexboxFixTimeoutId = setTimeout(function () {
 
         if ($wrapper.prop('scrollHeight') > $window.height())
@@ -45,7 +41,7 @@
         else
           $wrapper.css('height', '100vh');
 
-      }, 0);
+      }, 100);
 
     }).triggerHandler('resize.flexbox-fix');
 
@@ -64,7 +60,7 @@
   }
 
   // Main.
-  var delay = 0,
+  var delay = 250,
   locked = false;
 
   // Methods.

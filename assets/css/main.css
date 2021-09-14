@@ -101,16 +101,16 @@ input, select, textarea {
 		background: #1b1f22;
 	}
 
-		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
-			-moz-animation: none !important;
-			-webkit-animation: none !important;
-			-ms-animation: none !important;
-			animation: none !important;
-			-moz-transition: none !important;
-			-webkit-transition: none !important;
-			-ms-transition: none !important;
-			transition: none !important;
-		}
+  body.is-preload *, body.is-preload *:before, body.is-preload *:after {
+    animation: none !important;
+    transition: none !important;
+    -moz-animation: none !important;
+    -webkit-animation: none !important;
+    -ms-animation: none !important;
+    -moz-transition: none !important;
+    -webkit-transition: none !important;
+    -ms-transition: none !important;
+  }
 
 /* Type */
 
@@ -1397,7 +1397,7 @@ input, select, textarea {
 		}
 
 		body.is-article-visible #header {
-      /* old funky stuff that bugs translation floats from 
+      /* funky stuff that bugs translation floating tab
       -moz-transform: scale(0.95);
 			-webkit-transform: scale(0.95);
 			-ms-transform: scale(0.95);
@@ -1408,7 +1408,6 @@ input, select, textarea {
 			filter: blur(0.1rem);
       */
 			opacity: 0;
-
 		}
 
 		
@@ -1422,15 +1421,14 @@ input, select, textarea {
 		}
 
 		@media screen and (max-width: 736px) {
-
 			#header > * {
 				margin-top: 2rem;
 			}
 
-				#header > *:before {
-					top: calc(-2rem - 1px);
-					height: calc(2rem + 1px);
-				}
+      #header > *:before {
+        top: calc(-2rem - 1px);
+        height: calc(2rem + 1px);
+      }
 
 			#header .logo {
 				width: 4.75rem;
@@ -1438,9 +1436,9 @@ input, select, textarea {
 				line-height: 4.75rem;
 			}
 
-				#header .logo .icon:before {
-					font-size: 1.75rem;
-				}
+      #header .logo .icon:before {
+        font-size: 1.75rem;
+      }
 
 			#header .content .inner {
 				padding: 2.5rem 1rem;
@@ -1452,54 +1450,53 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 480px) {
 
+		@media screen and (max-width: 480px) {
 			#header {
 				padding: 1.5rem 0;
 			}
 
-				#header .content .inner {
-					padding: 2.5rem 0;
-				}
+      #header .content .inner {
+        padding: 2.5rem 0;
+      }
 
-				#header nav ul {
-					-moz-flex-direction: column;
-					-webkit-flex-direction: column;
-					-ms-flex-direction: column;
-					flex-direction: column;
-					min-width: 10rem;
-					max-width: 100%;
-				}
+      #header nav ul {
+        -moz-flex-direction: column;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        min-width: 10rem;
+        max-width: 100%;
+      }
 
-					#header nav ul li {
-						border-left: 0;
-						border-top: solid 1px #ffffff;
-					}
+      #header nav ul li {
+        border-left: 0;
+        border-top: solid 1px #ffffff;
+      }
 
-						#header nav ul li:first-child {
-							border-top: 0;
-						}
+      #header nav ul li:first-child {
+        border-top: 0;
+      }
 
-						#header nav ul li a {
-							height: 3rem;
-							line-height: 3rem;
-							min-width: 0;
-							width: 100%;
-						}
+      #header nav ul li a {
+        height: 3rem;
+        line-height: 3rem;
+        min-width: 0;
+        width: 100%;
+      }
 
-				#header nav.use-middle:after {
-					display: none;
-				}
-
+      #header nav.use-middle:after {
+        display: none;
+      }
 		}
 
 /* Main */
 
 	#main {
+		flex-grow: 1;
 		-moz-flex-grow: 1;
 		-webkit-flex-grow: 1;
 		-ms-flex-grow: 1;
-		flex-grow: 1;
 		-moz-flex-shrink: 1;
 		-webkit-flex-shrink: 1;
 		-ms-flex-shrink: 1;
@@ -1526,14 +1523,15 @@ input, select, textarea {
 	}
 
 		#main article {
+			transform: translateY(0.25rem);
+			transition: opacity 0.325s ease-in-out, transform 0.325s ease-in-out;
 			-moz-transform: translateY(0.25rem);
 			-webkit-transform: translateY(0.25rem);
 			-ms-transform: translateY(0.25rem);
-			transform: translateY(0.25rem);
 			-moz-transition: opacity 0.325s ease-in-out, -moz-transform 0.325s ease-in-out;
 			-webkit-transition: opacity 0.325s ease-in-out, -webkit-transform 0.325s ease-in-out;
 			-ms-transition: opacity 0.325s ease-in-out, -ms-transform 0.325s ease-in-out;
-			transition: opacity 0.325s ease-in-out, transform 0.325s ease-in-out;
+
 			padding: 4.5rem 2.5rem 1.5rem 2.5rem ;
 			position: relative;
 			width: 40rem;
@@ -1647,14 +1645,10 @@ input, select, textarea {
 			filter: blur(0.1rem);
 			opacity: 0;
 		}
-
-		body.is-preload #footer {
-			opacity: 0;
-		}
   
     
+    
   /* new stuff */
-
   .centerimage {
     border-radius: 50%;
     margin-bottom: 5%;
@@ -1840,7 +1834,7 @@ input, select, textarea {
   }
 
   div.collapsible-content {
-    /*border: double; /* debug */
+    /* border: double; */ /* for debug */
     margin-bottom: 20px;
     padding: 0 18px;
     max-height: 0;
