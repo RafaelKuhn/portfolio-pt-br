@@ -26,7 +26,7 @@
     $window.on('load', function() {
       window.setTimeout(function() {
         $body.removeClass('is-preload');
-      }, 100);
+      }, 15);
     });
 
   // Fix: Flexbox min-height bug on IE.
@@ -45,7 +45,7 @@
         else
           $wrapper.css('height', '100vh');
 
-      }, 250);
+      }, 0);
 
     }).triggerHandler('resize.flexbox-fix');
 
@@ -64,8 +64,8 @@
   }
 
   // Main.
-  var delay = 325,
-    locked = false;
+  var delay = 0,
+  locked = false;
 
   // Methods.
   $main._show = function (id, initial) {
@@ -107,7 +107,7 @@
       // Unmark as switching.
       setTimeout(function () {
         $body.removeClass('is-switching');
-      }, (initial ? 1000 : 0));
+      }, (initial ? 0 : 0));
 
       return;
 
@@ -148,7 +148,7 @@
             locked = false;
           }, delay);
 
-        }, 25);
+        }, 0);
 
       }, delay);
 
@@ -187,7 +187,7 @@
             locked = false;
           }, delay);
 
-        }, 25);
+        }, 0);
 
       }, delay);
 
@@ -278,7 +278,7 @@
           locked = false;
         }, delay);
 
-      }, 25);
+      }, 0);
 
     }, delay);
 
@@ -315,28 +315,16 @@
 
   $window.on('keyup', function (event) {
 
-    switch (event.keyCode) {
-      // 27 means ESC
-      case 27: 
-
-        // Article visible? Hide.
-        if ($body.hasClass('is-article-visible'))
-          $main._hide(true);
-
-        break;
-
-      default:
-        break;
-
+    if (event.key === 'Escape') {
+      if ($body.hasClass('is-article-visible'))
+      $main._hide(true);
     }
 
   });
 
   $window.on('hashchange', function (event) {
-
     // Empty hash?
-    if (location.hash == ''
-      || location.hash == '#') {
+    if (location.hash == '' || location.hash == '#') {
 
       // Prevent default.
       event.preventDefault();
@@ -345,10 +333,8 @@
       // Hide.
       $main._hide();
 
-    }
-
-    // Otherwise, check for a matching article.
-    else if ($main_articles.filter(location.hash).length > 0) {
+      // Otherwise, check for a matching article.
+    } else if ($main_articles.filter(location.hash).length > 0) {
 
       // Prevent default.
       event.preventDefault();
@@ -356,7 +342,6 @@
 
       // Show article.
       $main._show(location.hash.substr(1));
-
     }
 
   });

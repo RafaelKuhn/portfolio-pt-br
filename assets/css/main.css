@@ -1397,7 +1397,8 @@ input, select, textarea {
 		}
 
 		body.is-article-visible #header {
-			-moz-transform: scale(0.95);
+      /* old funky stuff that bugs translation floats from 
+      -moz-transform: scale(0.95);
 			-webkit-transform: scale(0.95);
 			-ms-transform: scale(0.95);
 			transform: scale(0.95);
@@ -1405,7 +1406,9 @@ input, select, textarea {
 			-webkit-filter: blur(0.1rem);
 			-ms-filter: blur(0.1rem);
 			filter: blur(0.1rem);
+      */
 			opacity: 0;
+
 		}
 
 		
@@ -1776,7 +1779,7 @@ input, select, textarea {
     display: block;
   }
   .dropdown-content a:hover {
-    background-color: #f1f1f1
+    background-color: grey
   }
   .dropdown-content a img {
     margin-right: 5px;
