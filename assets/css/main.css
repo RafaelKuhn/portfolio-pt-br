@@ -1682,22 +1682,10 @@ input, select, textarea {
   }
 
 
-
   ul.sublist {
     list-style-type: none;
-    padding-left: 0px;
+    padding: 0;
   }
-  ul.sublist li span {
-    position: relative;
-    left: 5px;
-  }
-  ul.sublist li i {
-    font-size: 0.5em;
-    vertical-align: middle;
-  }
-  
-  
-
 
 
   ul.mainlist {
