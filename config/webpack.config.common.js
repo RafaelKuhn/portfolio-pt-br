@@ -20,7 +20,8 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         { from: path.resolve(__dirname, '../videos'), to: 'videos' },
-        { from: path.resolve(__dirname, '../images'), to: 'images' }
+        { from: path.resolve(__dirname, '../images'), to: 'images' },
+        { from: path.resolve(__dirname, '../_headers'), to: './' }
       ]
     }),
 
