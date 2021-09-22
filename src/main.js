@@ -1,3 +1,13 @@
+import "./style/main.css";
+
+import browser from "./js/browser.min.js";
+import breakpoints from "./js/breakpoints.min";
+
+import { pauseVideosWithoutAutoplay } from "./js/custom";
+import { setupCollapsibles } from "./js/collapsible";
+
+setupCollapsibles();
+
 (function ($) {
 
   var $window = $(window),
