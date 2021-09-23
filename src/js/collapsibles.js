@@ -1,4 +1,4 @@
-import { pauseVideosWithoutAutoplay } from "./custom";
+import { pauseVideosWithoutAutoplay } from "./original-template/custom";
 
 /** @param {HTMLButtonElement} button   */
 const closeCollapsible = (button) => {
@@ -13,7 +13,7 @@ const closeCollapsible = (button) => {
   pauseVideosWithoutAutoplay();
 }
 
-export function setupCollapsibles() {
+function setupCollapsibles() {
   var collapsibles = document.querySelectorAll("button.collapsible");
 
   for (var i = 0; i < collapsibles.length; i++) {
@@ -31,3 +31,5 @@ export function setupCollapsibles() {
     });
   }
 }
+
+setupCollapsibles();

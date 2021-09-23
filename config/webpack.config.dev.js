@@ -6,6 +6,7 @@ module.exports = merge(
   {
     mode: 'development',
     devServer: {
+      open: true,
       liveReload: false
     }
   }

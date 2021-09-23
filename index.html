@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<!DOCTYPE HTML style="display:none">
 <!--
 	Dimension by HTML5 UP
 	html5up.net | @ajlkn
@@ -53,13 +53,12 @@
     <meta property="og:image:alt" content="a photo of me">
 
     <link rel="icon" href="images/icon.png">
-		<!-- <link rel="stylesheet" href="assets/css/main.css" /> -->
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<noscript><p>Enable javascript to visit this website</p></noscript>
 	</head>
 	<body class="is-preload">
 
     <!-- Wrapper -->
-    <div id="wrapper">
+    <div id="wrapper" style="display:none">
 
       <!-- Header -->
         <header id="header">
@@ -72,7 +71,7 @@
               <button class="dropdown-button"><img src="./images/flag-brazil.png" width="20" height="20" alt="bandeira do brasil" />PT-BR</button>
               <div class="dropdown-content">
               <a href="#"><img src="./images/flag-brazil.png" alt="brazil flag" width="20" height="20" alt="bandeira do brasil" />PT-BR</a>
-              <a href="#"><img src="./images/flag-eua.png" alt="eua flag" width="20" height="20" />EN-US</a>
+              <!-- <a href="#"><img src="./images/flag-eua.png" alt="eua flag" width="20" height="20" />EN-US</a> -->
               </div>
             </div>
 
@@ -86,10 +85,10 @@
 
           <nav>
             <ul>
-              <li><a href="#about" onclick="articleClicked('About')">&nbsp;&nbsp;&nbsp;Sobre&nbsp;&nbsp;&nbsp;</a></li>
-              <li><a href="#stack" onclick="articleClicked('Stack')">Tecnologias</a></li>
-              <li><a href="#projects" onclick="articleClicked('Projects')">&nbsp;&nbsp;Projetos&nbsp;</a></li>
-              <li><a href="#contact" onclick="articleClicked('Contact')">&nbsp;&nbsp;Contato&nbsp;&nbsp;</a></li>
+              <li><a href="#about" onclick="articleClicked('About')">Sobre</a></li>
+              <li><a href="#stack" onclick="articleClicked('Stack')">Aparatos</a></li>
+              <li><a href="#projects" onclick="articleClicked('Projects')">Projetos</a></li>
+              <li><a href="#contact" onclick="articleClicked('Contact')">Contato</a></li>
             </ul>
           </nav>
 
@@ -101,7 +100,7 @@
           <!-- About -->
           <article id="about">
             <h2 class="major">Sobre</h2>              
-            <img src="images/piá-ajeitado-crop.jpg" class="centerimage" alt="eu de terninho bem bonito" />
+            <img src="images/piá-ajeitado-crop.jpg" class="centerimage" alt="eu de terninho" />
             <p style="text-align: justify;">Olá, meu nome é Rafael Kuhn, sou desenvolvedor de games e programador gráfico,
               Trabalhei no desenvolvimento e publicação de "jogos sérios" para educação do ensino médio e fundamental utilizados por centenas de alunos e professores.<br /><br />
               Sou apaixonado por tecnologia, gráficos e games.<br /><br />
@@ -111,7 +110,7 @@
 
           <!-- Stack -->
           <article id="stack">
-            <h2 class="major center-on-mobile">Competências<br class="mobile-break" /> • <br class="mobile-break" />Tecnologias</h2>
+            <h2 class="major center-on-mobile">Competências<br class="mobile-break" />&nbsp•&nbsp<br class="mobile-break" />Tecnologias</h2>
             <p style="text-align: justify;">
 
               <ul class="mainlist">
@@ -154,7 +153,7 @@
 
           <!-- Projects -->
           <article id="projects">
-            <h2 class="major center-on-mobile">Projetos • Estudo</h2><br class="mobile-break" />
+            <h2 class="major center-on-mobile">Projetos • Estudos</h2><br class="mobile-break" />
                         
             <h4 class='subtitle'>Profissional</h4>
 
@@ -312,19 +311,19 @@
               <h2 class="major">Contato • Links</h2>
               <ul class="contact-list">
                 <li>
-                  <p><a href="https://github.com/RafaelKuhn" target="_blank" onclick="contactClicked('GitHub')"><i class="icon brands fa-github"></i> Github</a></p>
+                  <p><a href="https://github.com/RafaelKuhn" target="_blank" onclick="contactClicked('GitHub')"><i class="fab fa-github"></i> Github</a></p>
                 </li>
                 <li>
-                  <p><a href="https://gitlab.com/RafaelKuhn" target="_blank" onclick="contactClicked('GitLab')"><i class="icon brands fa-gitlab"></i> Gitlab</a></p>
+                  <p><a href="https://gitlab.com/RafaelKuhn" target="_blank" onclick="contactClicked('GitLab')"><i class="fab fa-gitlab"></i> Gitlab</a></p>
                 </li>
                 <li>
-                  <p><a href="https://www.instagram.com/rafa_el_kuhn/" target="_blank" onclick="contactClicked('Instagram')"><i class="icon brands fa-instagram"></i> Instagram</a></p>
+                  <p><a href="https://www.instagram.com/rafa_el_kuhn/" target="_blank" onclick="contactClicked('Instagram')"><i class="fab fa-instagram"></i> Instagram</a></p>
                 </li>
                 <li>
-                  <p><a href="mailto:rafa.faelk@gmail.com" target="_blank" onclick="contactClicked('Gmail')"><i class="icon brands fa fa-google"></i> Enviar e-mail: Gmail</a></p>
+                  <p><a href="mailto:rafa.faelk@gmail.com" target="_blank" onclick="contactClicked('Gmail')"><i class="fas fa-envelope-square"></i> Enviar e-mail</a></p>
                 </li>
                 <li>
-                  <p><a href="https://api.whatsapp.com/send?phone=5555996272456" target="_blank" onclick="contactClicked('Whatsapp')"><i class="icon brands fa-whatsapp"></i> Enviar mensagem: Whatsapp</a></p>
+                  <p><a href="https://api.whatsapp.com/send?phone=5555996272456" target="_blank" onclick="contactClicked('Whatsapp')"><i class="fab fa-whatsapp"></i> Enviar mensagem: Whatsapp</a></p>
                 </li>
               </ul>
               <br />
@@ -342,7 +341,9 @@
     </div>
 
 		<!-- BG -->
-    <div id="bg"></div>
+    <div id="bg">
+      <canvas class="background"></canvas>
+    </div>
 
     <!-- Google analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BJ5GX8H4Z0"></script>
